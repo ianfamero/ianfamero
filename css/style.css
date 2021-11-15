@@ -37,7 +37,7 @@ h3 {
   font-size: 25px;
 }
 
-/** Extend **/
+/** EXTENDED CLASSES **/
 .section-content, .expertise .expertise-content, .technical-skills .technical-skills-content, .footer .footer-content {
   max-width: 1100px;
   margin: 0 auto;
@@ -45,6 +45,7 @@ h3 {
   text-align: center;
 }
 
+/* CONTENT BODY */
 .header {
   background-color: #003F6D;
   width: 100%;
@@ -155,6 +156,7 @@ h3 {
   font-size: 40px;
   font-weight: 400;
   color: #fff;
+  padding: 0 10px;
 }
 
 .header .title-picture .title h2 {
@@ -284,8 +286,8 @@ h3 {
   padding: 10px;
   border-radius: 10px;
   margin: 5px 1px;
-  -webkit-animation: fadeIn 1s;
-          animation: fadeIn 1s;
+  -webkit-animation: wipe-enter 1s;
+          animation: wipe-enter 1s;
 }
 
 .beginner {
@@ -308,24 +310,6 @@ h3 {
   display: none;
 }
 
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 /* MEDIA QUERIES */
 @media screen and (max-width: 885px) {
   .header .title-picture {
@@ -344,6 +328,148 @@ h3 {
   .expertise .expertise-content .expertise-items div {
     max-width: 350px;
     margin: 0 auto;
+  }
+}
+
+/* ANIMATIONS */
+@media (prefers-reduced-motion: no-preference) {
+  .square-animation {
+    -webkit-animation: wipe-enter 1s 1;
+            animation: wipe-enter 1s 1;
+  }
+  .fade-in {
+    -webkit-animation: fade-in 2s 1;
+            animation: fade-in 2s 1;
+  }
+  .fade-in-up {
+    -webkit-animation: fade-in-up 2s 1;
+            animation: fade-in-up 2s 1;
+  }
+  .fade-in-left {
+    -webkit-animation: fade-in-left 2s 1;
+            animation: fade-in-left 2s 1;
+  }
+  .fade-in-right {
+    -webkit-animation: fade-in-right 2s 1;
+            animation: fade-in-right 2s 1;
+  }
+}
+
+@-webkit-keyframes wipe-enter {
+  0% {
+    -webkit-transform: scale(0, 0.025);
+            transform: scale(0, 0.025);
+  }
+  50% {
+    -webkit-transform: scale(1, 0.025);
+            transform: scale(1, 0.025);
+  }
+}
+
+@keyframes wipe-enter {
+  0% {
+    -webkit-transform: scale(0, 0.025);
+            transform: scale(0, 0.025);
+  }
+  50% {
+    -webkit-transform: scale(1, 0.025);
+            transform: scale(1, 0.025);
+  }
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-in-up {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes fade-in-left {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fade-in-left {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes fade-in-right {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fade-in-right {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 /*# sourceMappingURL=style.css.map */
