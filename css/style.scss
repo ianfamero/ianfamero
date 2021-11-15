@@ -386,6 +386,22 @@ h3 {
   }
 }
 
+.scroll-to-top {
+  position: fixed;
+  display: none;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px 20px;
+  background-color: $maincolor-darker;
+  color: #fff;
+  animation: fade-in 1s;
+  cursor: pointer;
+}
+
+.show-scroll-to-top {
+  display: block;
+}
+
 /* ANIMATIONS */ 
 
 @media (prefers-reduced-motion: no-preference) {
