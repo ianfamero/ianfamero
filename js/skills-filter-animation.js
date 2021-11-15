@@ -1,5 +1,3 @@
-// JS FILTER
-
 const allBtn = document.querySelector(".allBtn");
 const beginnerBtn = document.querySelector(".beginnerBtn");
 const intermediateBtn = document.querySelector(".intermediateBtn");
