@@ -342,16 +342,16 @@ h3 {
             animation: fade-in 2s 1;
   }
   .fade-in-up {
-    -webkit-animation: fade-in-up 2s 1;
-            animation: fade-in-up 2s 1;
+    -webkit-animation: fade-in-up 1.5s 1;
+            animation: fade-in-up 1.5s 1;
   }
   .fade-in-left {
-    -webkit-animation: fade-in-left 2s 1;
-            animation: fade-in-left 2s 1;
+    -webkit-animation: fade-in-left 1.5s 1;
+            animation: fade-in-left 1.5s 1;
   }
   .fade-in-right {
-    -webkit-animation: fade-in-right 2s 1;
-            animation: fade-in-right 2s 1;
+    -webkit-animation: fade-in-right 1.5s 1;
+            animation: fade-in-right 1.5s 1;
   }
 }
 
@@ -398,8 +398,8 @@ h3 {
 @-webkit-keyframes fade-in-up {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
+    -webkit-transform: translate3d(0, 20%, 0);
+    transform: translate3d(0, 20%, 0);
   }
   to {
     opacity: 1;
@@ -411,8 +411,8 @@ h3 {
 @keyframes fade-in-up {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
+    -webkit-transform: translate3d(0, 20%, 0);
+    transform: translate3d(0, 20%, 0);
   }
   to {
     opacity: 1;
@@ -424,8 +424,8 @@ h3 {
 @-webkit-keyframes fade-in-left {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(-20%, 0, 0);
+    transform: translate3d(-20%, 0, 0);
   }
   to {
     opacity: 1;
@@ -437,8 +437,8 @@ h3 {
 @keyframes fade-in-left {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(-20%, 0, 0);
+    transform: translate3d(-20%, 0, 0);
   }
   to {
     opacity: 1;
@@ -450,8 +450,8 @@ h3 {
 @-webkit-keyframes fade-in-right {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
+    -webkit-transform: translate3d(20%, 0, 0);
+    transform: translate3d(20%, 0, 0);
   }
   to {
     opacity: 1;
@@ -463,8 +463,8 @@ h3 {
 @keyframes fade-in-right {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
+    -webkit-transform: translate3d(20%, 0, 0);
+    transform: translate3d(20%, 0, 0);
   }
   to {
     opacity: 1;
