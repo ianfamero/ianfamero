@@ -106,6 +106,7 @@ h3 {
 
 .header .logo-menu .menu {
   text-align: right;
+  padding-right: 20px;
 }
 
 .header .logo-menu .menu ul {
@@ -132,6 +133,16 @@ h3 {
 
 .header .logo-menu .menu ul li .active {
   background-color: #00365C;
+}
+
+.header .logo-menu .menu .menu-list {
+  display: block;
+}
+
+.header .logo-menu .menu .hamburger {
+  display: none;
+  color: #fff;
+  font-size: 30px;
 }
 
 .header .title-picture {
@@ -328,6 +339,36 @@ h3 {
   .expertise .expertise-content .expertise-items div {
     max-width: 350px;
     margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header .logo-menu .menu .menu-list {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 78px;
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+  }
+  .header .logo-menu .menu .menu-list li {
+    display: block;
+  }
+  .header .logo-menu .menu .menu-list li a {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    text-align: left;
+  }
+  .header .logo-menu .menu .hamburger {
+    display: block;
+    margin: 20px 5px;
+    cursor: pointer;
+  }
+  .show-menu {
+    display: block !important;
   }
 }
 
