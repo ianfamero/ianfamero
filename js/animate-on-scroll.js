@@ -4,9 +4,13 @@ const observer = new IntersectionObserver(entries => {
       if (entry.target.classList.contains('title-picture')) {
         entry.target.classList.add('fade-in');
       } else if (entry.target.classList.contains('front-end-box')) {
-        entry.target.classList.add('fade-in-left');
+        if(window.innerWidth > 885) {
+          entry.target.classList.add('fade-in-left');
+        }
       } else if (entry.target.classList.contains('ci-cd-box')) {
-        entry.target.classList.add('fade-in-right');
+        if(window.innerWidth > 885) {
+          entry.target.classList.add('fade-in-right');
+        }
       } else {
         entry.target.classList.add('fade-in-up');
       }
