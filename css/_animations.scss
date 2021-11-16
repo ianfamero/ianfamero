@@ -1,22 +1,22 @@
 @media (prefers-reduced-motion: no-preference) {
   .wipe-enter {
-    animation: wipe-enter 1s 1;
+    animation: wipe-enter 1s;
   }
 
   .fade-in {
-    animation: fade-in 2s 1;
+    animation: fade-in 2s;
   }
 
   .fade-in-up {
-    animation: fade-in-up 1.5s 1;
+    animation: fade-in-up 1.5s;
   }
 
   .fade-in-left {
-    animation: fade-in-left 1.5s 1;
+    animation: fade-in-left 1.5s;
   }
 
   .fade-in-right {
-    animation: fade-in-right 1.5s 1;
+    animation: fade-in-right 1.5s;
   }
 }
 
