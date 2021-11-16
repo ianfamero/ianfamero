@@ -16,9 +16,9 @@ const scroll_to_top = document.querySelector(".scroll-to-top");
 
 window.addEventListener("scroll", (e) => { // show scroll to top button when location is greater than 600px
   if(e.currentTarget.scrollY > 600) {
-    scroll_to_top.classList.add("show-scroll-to-top");
+    scroll_to_top.classList.add("scroll-to-top-block");
   } else {
-    scroll_to_top.classList.remove("show-scroll-to-top");
+    scroll_to_top.classList.remove("scroll-to-top-block");
   }
 });
 

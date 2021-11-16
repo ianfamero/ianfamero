@@ -7,9 +7,7 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -19,25 +17,17 @@ body {
   color: #333;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
   font-family: 'Raleway', sans-serif;
-  line-height: 1.4;
   font-weight: 400;
+  line-height: 1.4;
   padding: 0;
   margin: 5px;
 }
 
-h1 {
-  font-size: 35px;
-}
-
-h2 {
-  font-size: 30px;
-}
-
-h3 {
-  font-size: 25px;
-}
+h1 { font-size: 35px; }
+h2 { font-size: 30px; }
+h3 { font-size: 25px; }
 
 /** MIXINS **/
 
@@ -46,6 +36,26 @@ h3 {
   margin: 0 auto;
   padding: 100px 50px;
   text-align: center;
+
+  h2 {
+    text-transform: uppercase;
+  }
+
+  p {
+    line-height: 1.8;
+  }
+}
+
+@mixin expertiseIcon($text_color, $background_color) {
+  color: $text_color;
+  background-color: $background_color;
+  padding: 20px;
+  margin-bottom: 5px;
+  border-radius: 30px;
+
+  p {
+    line-height: 2;
+  }
 }
 
 /* GENERIC STYLES */
@@ -59,12 +69,26 @@ h3 {
   }
 }
 
+.scroll-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px 20px;
+  background-color: $maincolor-opacity;
+  color: $white;
+  animation: fade-in 1s;
+  cursor: pointer;
+}
+
+.scroll-to-top-block {
+  display: block;
+}
+
 /* CONTENT BODY */
 
 .header {
   background-color: $maincolor;
-  width: 100%;
-
   .logo-menu {
     max-width: 1100px;
     min-height: 78px;
@@ -87,24 +111,17 @@ h3 {
       }
   
       .text {
-        color: #fff;
-        
-        h2 {
-          margin: 0;
-          padding: 0
-        }
-
-        a {
-          color: #fff;
-          text-decoration: none;;
-        }
-
         .name {
-          font-size: 16px;
+          @extend .job-title;
+          font-size: 16px !important;
           font-weight: 600;
+          text-decoration: none;
         }
 
         .job-title {
+          color: $white;
+          margin: 0;
+          padding: 0;
           font-size: 13px;
         }
       }
@@ -117,19 +134,21 @@ h3 {
         list-style: none;
         padding: 15px 2px 0 0;
         margin-right: 0 10px 0 0;
+        display: block;
+
         li {
           display: inline-block;
           margin: 0;
           padding: 0;
 
           a {
-            color: #fff;
+            color: $white;
             padding: 10px;
             text-decoration: none;
-          }
 
-          a:hover {
-            background-color: $maincolor-darker;
+            &:hover {
+              @extend .active;
+            }
           }
 
           .active {
@@ -137,13 +156,9 @@ h3 {
           }
         }
       }
-      .menu-list {
-        display: block;
-      }
+
       .hamburger {
         display: none;
-        color: #fff;
-        font-size: 30px;
       }
     }
   }
@@ -163,106 +178,62 @@ h3 {
       h1 {
         font-size: 40px;
         font-weight: 400;
-        color: #fff;
+        color: $white;
         padding: 0 10px;
       }
   
       h2 {
         font-size: 25px;
         font-weight: 400;
-        color: #fff;
+        color: $white;
       }
     }
   }
 }
 
 .expertise {
-  width: 100%;
-
   .expertise-content {
     @include sectionContent();
-
-    h2 {
-      text-transform: uppercase;
-    }
-
-    p {
-      line-height: 1.8;
-    }
-  
     .expertise-items {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
 
-      div {
-        padding: 25px;
-      }
-
-      p {
-        line-height: 2;
-      }
-
-      .expertise-items-logo {
+      > div {
         padding: 20px;
-        border-radius: 30px;
-        margin-bottom: 5px;
+        margin: 5px;
       }
 
       .front-end {
-        color: #58CFFF;
-        background-color: #E9F9FF;
-        @extend .expertise-items-logo;
+        @include expertiseIcon(#58CFFF, #E9F9FF);
       }
       
       .back-end {
-        color: #FFC261;
-        background-color: #FFF4E4;
-        @extend .expertise-items-logo;
+        @include expertiseIcon(#FFC261, #FFF4E4);
       }
       
       .ci-cd {
-        color: #F66565;
-        background-color: #FFF5F6;
-        @extend .expertise-items-logo;
+        @include expertiseIcon(#F66565, #FFF5F6);
       }
     }
   }
 }
 
 .technical-skills {
-  width: 100%;
-  background-color: #F2F5F8;
-
+  background-color: $dirty-white;
   .technical-skills-content {
     @include sectionContent();
     max-width: 1020px;
-
-    h2 {
-      text-transform: uppercase;
-    }
-
-    p {
-      line-height: 1.8;
-    }
   }
 }
 
 .footer {
-  width: 100%;
   background-color: $maincolor;
-  color: #fff;
+  color: $white;
   .footer-content {
     @include sectionContent();
     padding: 35px;
     
-    div {
-      padding: 5px;
-      
-      .fa {
-        font-size: 18px;
-        margin-right: 10px;
-      }
-    }
+    div { padding: 5px; }
   }
 }
 
@@ -284,11 +255,10 @@ h3 {
   .expertise {
     .expertise-content {
       .expertise-items {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
 
-        div {
-          max-width: 350px;
-          margin: 0 auto;
+        > div {
+          background-color: $dirty-white;
         }
       }
     }
@@ -299,11 +269,11 @@ h3 {
   .header {
     .logo-menu {
       .menu {
-        .menu-list {
+        ul {
           display: none;
           position: absolute;
-          left: 0;
           top: 78px;
+          left: 0;
           width: 100%;
           text-align: left;
           padding: 0;
@@ -315,41 +285,38 @@ h3 {
               display: block;
               width: 100%;
               padding: 10px 15px;
-              text-align: left;
             }
           }
         }
+
         .hamburger {
           display: block;
           margin: 20px 5px;
-          
+          color: $white;
+          font-size: 30px;
+
           .hamburger-icon {
             cursor: pointer;
           }
         }
+
+        .show-menu {
+          display: block !important;
+          animation: fade-in 1s;
+        }
       }
     }
   }
+}
 
-  .show-menu {
-    display: block !important;
+@media screen and (max-width: 600px) {
+  .expertise {
+    .expertise-content {
+      .expertise-items {
+        grid-template-columns: 1fr;
+      }
+    }
   }
-}
-
-.scroll-to-top {
-  position: fixed;
-  display: none;
-  bottom: 20px;
-  right: 20px;
-  padding: 15px 20px;
-  background-color: $maincolor-opacity;
-  color: #fff;
-  animation: fade-in 1s;
-  cursor: pointer;
-}
-
-.show-scroll-to-top {
-  display: block;
 }
 
 /* CSS FILTER */
