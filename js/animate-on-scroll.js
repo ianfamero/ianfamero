@@ -3,10 +3,10 @@ const observer = new IntersectionObserver(entries => {
     if (entry.isIntersecting) {
       if (entry.target.classList.contains('title-picture')) {
         entry.target.classList.add('fade-in');
-      } else if (entry.target.classList.contains('front-end-box')) {
-        entry.target.classList.add('fade-in-left');
-      } else if (entry.target.classList.contains('ci-cd-box')) {
-        entry.target.classList.add('fade-in-right');
+      } else if (entry.target.classList.contains('front-end-box') && window.innerWidth > 885) {
+          entry.target.classList.add('fade-in-left');
+      } else if (entry.target.classList.contains('ci-cd-box') && window.innerWidth > 885) {
+          entry.target.classList.add('fade-in-right');
       } else {
         entry.target.classList.add('fade-in-up');
       }
