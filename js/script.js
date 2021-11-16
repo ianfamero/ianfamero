@@ -1,35 +1,44 @@
-const hamburger = document.querySelector('.hamburger-icon');
-const menuList = document.querySelector('.menu-list');
-const scrollToTop = document.querySelector('.scroll-to-top');
-const techSkills = document.querySelector('.technical-skills');
-const skillMenu = document.querySelector('.skill-menu');
+/* HAMBURGER MENU */
+const hamburger_icon = document.querySelector(".hamburger-icon");
+const menu_list = document.querySelector(".menu-list");
 
-hamburger.addEventListener("click", () => {
-  if (menuList.classList.contains('show-menu')) {
-    menuList.classList.remove('show-menu');
+hamburger_icon.addEventListener("click", () => {
+  if (menu_list.classList.contains("show-menu")) {
+    menu_list.classList.remove("show-menu");
   } else {
-    menuList.classList.add('show-menu');
+    menu_list.classList.add("show-menu");
   }
 });
 
-window.addEventListener("scroll", (event) => {
-  if(event.target) {
-    menuList.classList.remove('show-menu');
-  }
 
-  if(event.currentTarget.scrollY > 600) {
-    scrollToTop.classList.add('show-scroll-to-top');
+/* SCROLL TO TOP */
+const scroll_to_top = document.querySelector(".scroll-to-top");
+
+window.addEventListener("scroll", (e) => { // show scroll to top button when location is greater than 600px
+  if(e.currentTarget.scrollY > 600) {
+    scroll_to_top.classList.add("show-scroll-to-top");
   } else {
-    scrollToTop.classList.remove('show-scroll-to-top');
+    scroll_to_top.classList.remove("show-scroll-to-top");
   }
 });
 
-scrollToTop.addEventListener("click", (e) => {
+scroll_to_top.addEventListener("click", (e) => { // scroll to the top of the page when the scroll to top button is clicked
   window.scrollTo(0, 0);
   e.preventDefault();
 });
 
-skillMenu.addEventListener("click", (e) => {
-  window.scrollTo(0, techSkills.getBoundingClientRect().top);
+
+/* SAME-PAGE MENU */
+const skill_menu = document.querySelector(".skill-menu");
+const technical_skills = document.querySelector(".technical-skills");
+
+skill_menu.addEventListener("click", (e) => { // get the location of the element then scroll to it
+  window.scrollTo(0, technical_skills.getBoundingClientRect().top);
   e.preventDefault();
+});
+
+window.addEventListener("scroll", (e) => {  // close the menu on scroll
+  if(e.target) {
+    menu_list.classList.remove("show-menu");
+  }
 });

@@ -1,7 +1,5 @@
-$maincolor: #003F6D;
-$maincolor-opacity: #00406d44;
-$maincolor-darker: #00365C;
-$maincolor-lighter: #92E4FF;
+@import "./variables";
+@import "./animations";
 
 *,
 *:before,
@@ -41,13 +39,24 @@ h3 {
   font-size: 25px;
 }
 
-/** EXTENDED CLASSES **/
+/** MIXINS **/
 
-.section-content {
+@mixin sectionContent() {
   max-width: 1100px;
   margin: 0 auto;
   padding: 100px 50px;
   text-align: center;
+}
+
+/* GENERIC STYLES */
+
+.social-icons {
+  margin: 15px;
+  a {
+    color: $maincolor-lighter;
+    font-size: 25px;
+    margin: 10px;
+  }
 }
 
 /* CONTENT BODY */
@@ -171,7 +180,7 @@ h3 {
   width: 100%;
 
   .expertise-content {
-    @extend .section-content;
+    @include sectionContent();
 
     h2 {
       text-transform: uppercase;
@@ -225,7 +234,7 @@ h3 {
   background-color: #F2F5F8;
 
   .technical-skills-content {
-    @extend .section-content;
+    @include sectionContent();
     max-width: 1020px;
 
     h2 {
@@ -239,7 +248,7 @@ h3 {
   background-color: $maincolor;
   color: #fff;
   .footer-content {
-    @extend .section-content;
+    @include sectionContent();
     padding: 35px;
     
     div {
@@ -251,70 +260,6 @@ h3 {
       }
     }
   }
-}
-
-.social-icons {
-  margin: 15px;
-  a {
-    color: $maincolor-lighter;
-    font-size: 25px;
-    margin: 10px;
-  }
-}
-
-/* CSS FILTER */
-
-.skills-container {
-  text-align: center;
-  padding-top: 15px;
-}
-
-.level {
-  display: inline-block;
-  padding: 5px 10px;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.beginnerBtn {
-  color: #77DD77;
-}
-
-.intermediateBtn {
-  color: #F7DA63;
-}
-
-.advancedBtn {
-  color: #FF6961;
-}
-
-.skill {
-  display: inline-block;
-  color: white;
-  padding: 10px;
-  border-radius: 10px;
-  margin: 5px 1px;
-  animation: wipe-enter 1s;
-}
-
-.beginner {
-  background-color: #77DD77;
-}
-
-.intermediate {
-  background-color: #F7DA63;
-}
-
-.advanced {
-  background-color: #FF6961;
-}
-
-.show-skill {
-  display: inline-block;
-}
-
-.hide-skill {
-  display: none;
 }
 
 /* MEDIA QUERIES */
@@ -403,82 +348,58 @@ h3 {
   display: block;
 }
 
-/* ANIMATIONS */ 
+/* CSS FILTER */
 
-@media (prefers-reduced-motion: no-preference) {
-  .square-animation {
-    animation: wipe-enter 1s 1;
-  }
-
-  .fade-in {
-    animation: fade-in 2s 1;
-  }
-
-  .fade-in-up {
-    animation: fade-in-up 1.5s 1;
-  }
-
-  .fade-in-left {
-    animation: fade-in-left 1.5s 1;
-  }
-
-  .fade-in-right {
-    animation: fade-in-right 1.5s 1;
-  }
+.skills-container {
+  text-align: center;
+  padding-top: 15px;
 }
 
-@keyframes wipe-enter {
-	0% {
-		transform: scale(0, .025);
-	}
-	50% {
-		transform: scale(1, .025);
-	}
+.skill {
+  display: inline-block;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px 1px;
+  animation: wipe-enter 1s;
 }
 
-@keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.level {
+  display: inline-block;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: 600;
 }
 
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 20%, 0);
-    transform: translate3d(0, 20%, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
+.beginner_btn {
+  color: #77DD77;
 }
 
-@keyframes fade-in-left {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(-20%, 0, 0);
-    transform: translate3d(-20%, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
+.intermediate_btn {
+  color: #F7DA63;
 }
 
-@keyframes fade-in-right {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(20%, 0, 0);
-    transform: translate3d(20%, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
+.advanced_btn {
+  color: #FF6961;
 }
+
+.beginner {
+  background-color: #77DD77;
+}
+
+.intermediate {
+  background-color: #F7DA63;
+}
+
+.advanced {
+  background-color: #FF6961;
+}
+
+.show-skill {
+  display: inline-block;
+}
+
+.hide-skill {
+  display: none;
+}
+

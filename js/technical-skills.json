@@ -1,0 +1,238 @@
+[
+  {
+    "skill_name": "HTML5",
+    "skill_expertise": "Advanced"
+  },
+  {
+    "skill_name": "CSS3",
+    "skill_expertise": "Advanced"
+  },
+  {
+    "skill_name": "SASS",
+    "skill_expertise": "Advanced"
+  },
+  {
+    "skill_name": "JavaScript",
+    "skill_expertise": "Advanced"
+  },
+  {
+    "skill_name": "ECMAScript 6",
+    "skill_expertise": "Advanced"
+  },
+  {
+    "skill_name": "TypeScript",
+    "skill_expertise": "Intermediate"
+  },
+  {
+    "skill_name": "CoffeScript",
+    "skill_expertise": "Intermediate"
+  },
+  {
+    "skill_name": "jQuery",
+    "skill_expertise": "Advanced"
+  },
+  {
+    "skill_name": "Lodash",
+    "skill_expertise": "Advanced"
+  },
+  {
+    "skill_name": "VueJS",
+    "skill_expertise": "Advanced"
+  },
+  {
+    "skill_name": "VueX",
+    "skill_expertise": "Intermediate"
+  },
+  {
+    "skill_name": "Angular",
+    "skill_expertise": "Intermediate"
+  },
+  {
+    "skill_name": "RxJS",
+    "skill_expertise": "Beginner"
+  },
+  {
+    "skill_name": "React",
+    "skill_expertise": "Beginner"
+  },
+  {
+    "skill_name": "Svelte",
+    "skill_expertise": "Beginner"
+  },
+  {
+    "skill_name": "Bootstrap",
+    "skill_expertise": "Advanced"
+  },
+  {
+    "skill_name": "Element UI",
+    "skill_expertise": "Advanced"
+  },
+  {
+    "skill_name": "Bulma",
+    "skill_expertise": "Intermediate"
+  },
+  {
+    "skill_name": "Quasar",
+    "skill_expertise": "Intermediate"
+  },
+  {
+    "skill_name": "Buefy",
+    "skill_expertise": "Intermediate"
+  },
+  {
+    "skill_name": "Vuetify",
+    "skill_expertise": "Intermediate"
+  },
+  {
+    "skill_name": "REST API design",
+    "skill_expertise": "Intermediate"
+  },
+  {
+    "skill_name": "AWS",
+    "skill_expertise": "Intermediate"
+  },
+  {
+    "skill_name": "Laravel",
+    "skill_expertise": "Advanced"
+  },
+  {
+    "skill_name": "CodeIgniter",
+    "skill_expertise": "Intermediate"
+  },
+  {
+    "skill_name": "Node.js",
+    "skill_expertise": "Intermediate"
+  },
+  {
+    "skill_name": "Express.js",
+    "skill_expertise": "Intermediate"
+  },
+  {
+    "skill_name": "MySQL",
+    "skill_expertise": "Advanced"
+  },
+  {
+    "skill_name": "MongoDB",
+    "skill_expertise": "Intermediate"
+  },
+  {
+    "skill_name": "PostgreSQL",
+    "skill_expertise": "Intermediate"
+  },
+  {
+    "skill_name": "WordPress",
+    "skill_expertise": "Advanced"
+  },
+  {
+    "skill_name": "Joomla",
+    "skill_expertise": "Advanced"
+  },
+  {
+    "skill_name": "Drupal",
+    "skill_expertise": "Intermediate"
+  },
+  {
+    "skill_name": "GIT",
+    "skill_expertise": "Advanced"
+  },
+  {
+    "skill_name": "Mercurial",
+    "skill_expertise": "Intermediate"
+  },
+  {
+    "skill_name": "Docker",
+    "skill_expertise": "Intermediate"
+  },
+  {
+    "skill_name": "Vagrant",
+    "skill_expertise": "Intermediate"
+  },
+  {
+    "skill_name": "Jenkins",
+    "skill_expertise": "Beginner"
+  },
+  {
+    "skill_name": "SSH Access",
+    "skill_expertise": "Advanced"
+  },
+  {
+    "skill_name": "CPanel",
+    "skill_expertise": "Advanced"
+  },
+  {
+    "skill_name": "FTP",
+    "skill_expertise": "Advanced"
+  },
+  {
+    "skill_name": "Apache",
+    "skill_expertise": "Intermediate"
+  },
+  {
+    "skill_name": "Nginx",
+    "skill_expertise": "Intermediate"
+  },
+  {
+    "skill_name": "Composer",
+    "skill_expertise": "Advanced"
+  },
+  {
+    "skill_name": "NPM",
+    "skill_expertise": "Advanced"
+  },
+  {
+    "skill_name": "Webpack",
+    "skill_expertise": "Intermediate"
+  },
+  {
+    "skill_name": "Parcel",
+    "skill_expertise": "Beginner"
+  },
+  {
+    "skill_name": "Github",
+    "skill_expertise": "Advanced"
+  },
+  {
+    "skill_name": "Gitlab",
+    "skill_expertise": "Advanced"
+  },
+  {
+    "skill_name": "Bitbucket",
+    "skill_expertise": "Advanced"
+  },
+  {
+    "skill_name": "Jira",
+    "skill_expertise": "Advanced"
+  },
+  {
+    "skill_name": "Trello",
+    "skill_expertise": "Advanced"
+  },
+  {
+    "skill_name": "Agile Scrum",
+    "skill_expertise": "Advanced"
+  },
+  {
+    "skill_name": "DevOps",
+    "skill_expertise": "Intermediate"
+  },
+  {
+    "skill_name": "Microsoft Suite",
+    "skill_expertise": "Advanced"
+  },
+  {
+    "skill_name": "Adobe Photostop",
+    "skill_expertise": "Advanced"
+  },
+  {
+    "skill_name": "Adobe Illustrator",
+    "skill_expertise": "Intermediate"
+  },
+  {
+    "skill_name": "Adobe XD",
+    "skill_expertise": "Intermediate"
+  },
+  {
+    "skill_name": "Figma",
+    "skill_expertise": "Intermediate"
+  }
+]
