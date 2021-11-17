@@ -42,3 +42,13 @@ window.addEventListener("scroll", (e) => {  // close the menu on scroll
     menu_list.classList.remove("show-menu");
   }
 });
+
+// LOADER
+const loader = document.querySelector(".loader-wrapper");
+
+window.addEventListener("load", (e) => {
+  setTimeout(() => {
+    loader.style.display = "none"
+  },
+  3000);
+});
