@@ -46,9 +46,9 @@ window.addEventListener("scroll", (e) => {  // close the menu on scroll
 // LOADER
 const loader = document.querySelector(".loader-wrapper");
 
-window.addEventListener("load", (e) => {
+window.addEventListener("load", () => {
   setTimeout(() => {
-    loader.style.display = "none"
+    loader.style.display = "none";
   },
   3000);
 });
