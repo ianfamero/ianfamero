@@ -96,6 +96,8 @@ h3 { font-size: 25px; }
     display: grid;
     grid-template-columns: minmax(220px, 1fr) 1fr;
 
+    a { text-decoration: none; }
+
     .logo {
       display: grid;
       grid-template-columns: 50px auto;
@@ -115,7 +117,6 @@ h3 { font-size: 25px; }
           @extend .job-title;
           font-size: 16px !important;
           font-weight: 600;
-          text-decoration: none;
         }
 
         .job-title {
@@ -233,7 +234,14 @@ h3 { font-size: 25px; }
     @include sectionContent();
     padding: 35px;
     
-    div { padding: 5px; }
+    div { 
+      padding: 5px;
+
+      .footer-icon {
+        font-size: 18px;
+        margin-right: 5px;
+      }
+    }
   }
 }
 
