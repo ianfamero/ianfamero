@@ -92,6 +92,10 @@
     "skill_expertise": "Intermediate"
   },
   {
+    "skill_name": "PHP",
+    "skill_expertise": "Intermediate"
+  },
+  {
     "skill_name": "Laravel",
     "skill_expertise": "Advanced"
   },
