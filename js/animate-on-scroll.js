@@ -22,4 +22,5 @@ observer.observe(document.querySelector('.back-end-box'));
 observer.observe(document.querySelector('.ci-cd-box'));
 observer.observe(document.querySelector('.technical-skills-content'));
 observer.observe(document.querySelector('.skills-container'));
+observer.observe(document.querySelector('.portfolio-content'));
 
