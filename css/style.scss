@@ -217,6 +217,22 @@ h3 { font-size: 25px; }
   }
 }
 
+.title-portfolio {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  .title {
+    text-align: center;
+
+    h1 {
+      font-size: 35px;
+      font-weight: 400;
+      color: $white;
+      padding: 50px 0;
+    }
+  }
+}
+
 .expertise {
   .expertise-content {
     @include sectionContent();
@@ -250,6 +266,58 @@ h3 { font-size: 25px; }
     @include sectionContent();
     max-width: 1020px;
   }
+}
+
+
+.portfolio {
+  .portfolio-content {
+    @include sectionContent();
+  }
+}
+
+.project-group {
+  // display: flex;
+  display: grid;
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.project-item {
+  background: #EFEFEF;
+  // flex-grow: 1; 
+  // max-width: 330px;
+  padding: 10px;
+  margin: 10px;
+  height: auto;
+
+  img {
+    width: 100%;
+  }
+  h3 {
+    font-size: 20px;
+    color: $maincolor;
+  }
+
+  a {
+    text-decoration: none !important;
+  }
+}
+
+.page {
+  .page-content {
+    @include sectionContent();
+    max-width: 900px !important;
+    text-align: left;
+  }
+}
+
+
+.fluid-img {
+  width: 100%;
+  height: auto;
+}
+
+.numbered-list-lh {
+  line-height: 200%;
 }
 
 .footer {
@@ -296,6 +364,9 @@ h3 { font-size: 25px; }
       }
     }
   }
+  .project-group {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -340,6 +411,11 @@ h3 { font-size: 25px; }
       }
     }
   }
+
+  .project-group {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -349,6 +425,10 @@ h3 { font-size: 25px; }
         grid-template-columns: 1fr;
       }
     }
+  }
+
+  .project-group {
+    grid-template-columns: 1fr;
   }
 }
 
